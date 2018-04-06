@@ -10,13 +10,16 @@
 function palindrome(str) {
   var arr = str.split('');
   var arrLength = arr.length-1;
-  for(var i=0; i<=arrLength; i++) {
-    return arr[i] === arr[arrLength-i];
+  var i = 0;
+  for(var i = 0; i<= arrLength; i++) {
+    if(!(arr[i] === arr[arrLength-i]))
+      return false;
   }
+  return true;
 }
 
 // function palindrome(str) {
-//   str.split('').every((char, i) => {
+// return str.split('').every((char, i) => {
 //     return char === str[str.length-i-1];
 //   })
 // }
