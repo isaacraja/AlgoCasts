@@ -10,8 +10,18 @@
 
 function reverseInt(n) {
   var sign = Math.sign(n);
-  var str = n.toString().split('').reverse().join('').trimLeft('0');
+  var str = n
+    .toString()
+    .split("")
+    .reverse()
+    .join("")
+    .trimLeft("0");
   return sign * parseInt(str);
 }
+// function reverseInt(n) {
+//   var sign = Math.sign(n);
+//   var str = n.toString().split('').reverse().join('').trimLeft('0');
+//   return sign * parseInt(str);
+// }
 
-module.exports = reverseInt;
+// module.exports = reverseInt;
