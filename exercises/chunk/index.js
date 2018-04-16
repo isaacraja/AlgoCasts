@@ -10,11 +10,11 @@
 
 function chunk(array, size) {
   var times = Math.ceil(array.length / size);
-  var arr = [],
-    chunkedArr = [];
+  var chunkedArr = [],
+    tempArr = [];
   for (let i = 1; i <= times; i++) {
-    arr[i] = array.splice(0, size);
-    chunkedArr.push(arr[i]);
+    tempArr[i] = array.splice(0, size);
+    chunkedArr.push(tempArr[i]);
   }
   return chunkedArr;
 }
